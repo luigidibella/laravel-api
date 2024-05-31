@@ -1,0 +1,56 @@
+@import '~bootstrap/scss/bootstrap';
+
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-success-subtle{
+    color: #d1e7dd;
+}
+
+.text-petrolium{
+    color: #04635c;
+}
+
+header{
+    height: 72px;
+}
+
+.main-wrapper{
+    height: calc(100vh - 72px);
+    background-color: #04635c;
+}
+
+aside{
+    width: 190px;
+    flex-shrink: 0;
+    ul{
+        list-style: none;
+        padding-left: 15px;
+        li{
+            line-height: 30px;
+            a{
+                text-decoration: none;
+                color: white;
+                span:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.crud-table{
+    input{
+        border: none;
+        outline: none;
+        /* background-color: #d1e7dd; */
+    }
+}
+
+.thumb{
+    width: 200px;
+    margin-top: 20px;
+}
