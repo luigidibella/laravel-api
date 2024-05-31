@@ -19,4 +19,4 @@ use App\Http\Controllers\Api\PageController;
     return $request->user();
 }); */
 
-Route::get('/project', [PageController::class, 'index']);
+Route::get('/projects', [PageController::class, 'index']);
