@@ -20,3 +20,5 @@ use App\Http\Controllers\Api\PageController;
 }); */
 
 Route::get('/projects', [PageController::class, 'index']);
+Route::get('/types', [PageController::class, 'getTypes']);
+Route::get('/technologies', [PageController::class, 'getTechnologies']);
