@@ -45,4 +45,14 @@ class PageController extends Controller
         }
         return response()->json(compact('success', 'project'));
     }
+
+    public function getProjectsByType($slug){
+        $type = Type::where('slug', $slug)->with('projects')->first();
+        return response()->json($type);
+    }
+
+    public function getProjectsByTechnologies($slug){
+        $technology = Technology::where('slug', $slug)->with('projects')->first();
+        return response()->json($technology);
+    }
 }
