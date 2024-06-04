@@ -37,8 +37,8 @@ class PageController extends Controller
             if($project->image){
                 $project->image = asset('storage/' . $project->image);
             }else{
-                $project->image = asset('img/no_image.webp');
-                $project->image_original_name = 'no_image';
+                $project->image = asset('storage/uploads/no-image.webp');
+                $project->image_original_name = 'no-image';
             }
         }else{
             $success = false;

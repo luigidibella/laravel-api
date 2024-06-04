@@ -39,7 +39,7 @@
                 <hr>
                 {{ $item->text }}
               </td>
-              <td> {{ $item->type?->name }} </td>
+              <td> {{ $item->type?->name ?? '---'}} </td>
               <td>
                 @forelse ($item->technologies as $technology)
                     <span class="badge rounded-pill text-bg-warning">{{ $technology->name }}</span>
