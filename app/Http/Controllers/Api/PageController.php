@@ -29,4 +29,20 @@ class PageController extends Controller
 
         return response()->json($technologies);
     }
+
+    public function getProjectBySlug($slug){
+        $project = Project::where('slug', $slug)->with('type', 'technologies')->first();
+        if($project){
+            $success = true;
+            if($project->image){
+                $project->image = asset('storage/' . $project->image);
+            }else{
+                $project->image = asset('img/no_image.webp');
+                $project->image_original_name = 'no_image';
+            }
+        }else{
+            $success = false;
+        }
+        return response()->json(compact('success', 'project'));
+    }
 }
