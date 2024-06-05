@@ -32,7 +32,7 @@
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo (*)</label>
-                    <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{ old('title') }}">
+                    <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{ old('title') }}" placeholder="Inserisci un titolo">
                     @error('title')
                     <small class="text-danger">
                         {{ $message }}
@@ -91,7 +91,7 @@
 
                 <div class="mb-3">
                     <label for="text" class="form-label">Descrizione (*)</label>
-                    <textarea name="text" class="form-control @error('text') is-invalid @enderror" id="text">{{ old('text') }}</textarea>
+                    <textarea name="text" class="form-control @error('text') is-invalid @enderror" id="text" placeholder="Inserisci una descrizione">{{ old('text') }}</textarea>
                     @error('text')
                     <small class="text-danger">
                         {{ $message }}

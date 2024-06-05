@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Type;
 use App\Models\Technology;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -35,9 +36,10 @@ class PageController extends Controller
         if($project){
             $success = true;
             if($project->image){
-                $project->image = asset('storage/' . $project->image);
+                // $project->image = asset('storage/' . $project->image);
+                $project->image = Storage::url($project->image);
             }else{
-                $project->image = asset('storage/uploads/no-image.webp');
+                $project->image = Storage::url('uploads/no-image.webp');
                 $project->image_original_name = 'no-image';
             }
         }else{
